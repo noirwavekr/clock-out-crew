@@ -7,27 +7,35 @@ Meet the cute crew counting down to your clock-out time!
 
 ---
 
-## 🇰🇷 설치 방법 (Korean)
-1. 상단의 초록색 **[Code]** 버튼을 클릭하고 **[Download ZIP]**을 눌러 파일을 받습니다.
-2. 다운로드한 압축파일을 해제합니다.
-3. 크롬 주소창에 `chrome://extensions`를 입력합니다.
-4. 우측 상단의 **개발자 모드** 토글을 **ON**으로 변경합니다.
-5. **"압축 해제된 확장 프로그램 로드"** 버튼을 클릭합니다.
-6. 압축을 푼 폴더 내부의 **`clock-out-crew`** 폴더를 선택합니다.
-7. 크롬 우측 상단의 **퍼즐 모양 아이콘(확장 프로그램)**을 누른 뒤, **Clock Out Crew**를 클릭해 실행합니다.
-8. 팝업창에서 퇴근 시간을 설정하면 귀여운 크루가 등장합니다! 🎉
-   *(TIP: 핀 아이콘을 눌러 고정해두면 더 편하게 사용할 수 있어요!)*
+## 🇰🇷 설치 방법
 
-## 🌎 How to Install (English)
-1. Click the green **[Code]** button at the top and select **[Download ZIP]**.
-2. Extract the downloaded ZIP file.
-3. Type `chrome://extensions` in your Chrome address bar.
-4. Switch the **Developer mode** toggle in the upper right corner to **ON**.
-5. Click the **"Load unpacked"** button.
-6. Select the **`clock-out-crew`** folder inside the extracted folder.
-7. Click the **puzzle icon (Extensions)** in the top right of Chrome and click **Clock Out Crew** to run it.
-8. Set your clock-out time in the popup window, and the crew will appear! 🎉
-   *(TIP: Click the pin icon to keep it visible for easy access!)*
+1. 상단의 **Code** 버튼 클릭 → **Download ZIP** 선택  
+2. 다운로드한 ZIP 파일 압축 해제  
+3. 크롬 주소창에 `chrome://extensions` 입력  
+4. 우측 상단 **개발자 모드** 활성화  
+5. **압축 해제된 확장 프로그램 로드** 클릭  
+6. 압축 해제한 폴더 내 `clock-out-crew` 폴더 선택  
+   (경로: `clock-out-crew-main/clock-out-crew`)  
+7. 크롬 우측 상단 퍼즐 아이콘 클릭 → **Clock Out Crew 실행**  
+8. 팝업에서 퇴근 시간 설정 → 크루 등장 🎉  
+
+> 💡 TIP: 핀 아이콘으로 확장 프로그램을 고정하면 더 편하게 사용할 수 있습니다.
+
+---
+
+## 🌎 How to Install
+
+1. Click the **Code** button → select **Download ZIP**  
+2. Extract the ZIP file  
+3. Go to `chrome://extensions` in Chrome  
+4. Enable **Developer mode** (top right)  
+5. Click **Load unpacked**  
+6. Select the `clock-out-crew` folder inside the extracted directory  
+   (Path: `clock-out-crew-main/clock-out-crew`)  
+7. Click the puzzle icon → launch **Clock Out Crew**  
+8. Set your clock-out time → your crew will appear 🎉  
+
+> 💡 TIP: Pin the extension for quicker access.
 
 ---
 

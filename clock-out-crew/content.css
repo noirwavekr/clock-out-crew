@@ -1,0 +1,194 @@
+/* Clock Out Crew — content styles v6 */
+#coc-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2147483647;
+  font-family: 'Apple SD Gothic Neo','Malgun Gothic','Segoe UI',sans-serif;
+  overflow: visible;
+  /* Theme color defaults (overridden by JS via applyThemeToLayer) */
+  --coc-main:   #ff7b35;
+  --coc-light:  #ff9a56;
+  --coc-border: #ff9a56;
+}
+
+.coc-pet {
+  position: fixed;
+  display: flex; flex-direction: column; align-items: center;
+  pointer-events: auto; cursor: grab; user-select: none; touch-action: none;
+  transition: filter 0.4s ease;
+}
+.coc-pet:active { cursor: grabbing; }
+
+/* ── FREEZE: blue tint on entire pet ── */
+.coc-pet.frozen { filter: hue-rotate(180deg) saturate(0.4) brightness(0.85); }
+
+/* ── Image ── */
+.coc-img { display:block; width:auto!important; object-fit:contain; }
+.coc-img.px { image-rendering: pixelated; }
+.coc-img.sz-small  { height:55px;  max-width:110px; }
+.coc-img.sz-medium { height:75px;  max-width:150px; }
+.coc-img.sz-large  { height:105px; max-width:210px; }
+
+/* ── Spawn animation ── */
+@keyframes coc-spawn {
+  0%   { transform: translateY(60px) scale(0.4); opacity: 0; }
+  60%  { transform: translateY(-14px) scale(1.08); opacity: 1; }
+  80%  { transform: translateY(6px) scale(0.96); }
+  100% { transform: translateY(0) scale(1); }
+}
+.coc-pet.spawning { animation: coc-spawn 0.55s cubic-bezier(.3,1.4,.6,1) forwards; }
+
+/* ── Bounce ── */
+@keyframes coc-bounce {
+  0%,100% { transform: translateY(0); }
+  30%  { transform: translateY(-18px) scale(1.1,.9); }
+  60%  { transform: translateY(-6px) scale(.95,1.05); }
+  80%  { transform: translateY(-2px); }
+}
+.coc-pet.bouncing { animation: coc-bounce 0.5s ease; }
+
+/* ── Spin ── */
+@keyframes coc-spin {
+  0%   { transform: rotate(0deg) scale(1); }
+  50%  { transform: rotate(200deg) scale(1.2); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+.coc-pet.spinning { animation: coc-spin 0.55s ease-in-out; }
+
+/* ── Freeze burst ── */
+.coc-freeze-burst {
+  position:absolute; width:70px; height:70px; border-radius:50%;
+  border: 3px solid #88ccff;
+  top:50%; left:50%; transform:translate(-50%,-50%) scale(0);
+  pointer-events:none;
+  animation: coc-freeze-ring 0.5s ease-out forwards;
+}
+@keyframes coc-freeze-ring {
+  0%   { transform:translate(-50%,-50%) scale(0); opacity:1; }
+  100% { transform:translate(-50%,-50%) scale(2.5); opacity:0; }
+}
+
+/* ── Particles ── */
+.coc-snowflake, .coc-heart {
+  position:fixed; font-size:14px; pointer-events:none;
+  animation: coc-particle-up var(--dur,1.2s) ease-out forwards;
+}
+@keyframes coc-particle-up {
+  0%   { transform: translateY(0) rotate(0deg); opacity:1; }
+  100% { transform: translateY(-60px) rotate(360deg); opacity:0; }
+}
+
+/* ── Speed lines ── */
+.coc-speedline {
+  position:fixed; width:22px; height:2px;
+  background: linear-gradient(to left, color-mix(in srgb, var(--coc-main) 70%, transparent), transparent);
+  border-radius:2px; pointer-events:none;
+  animation: coc-speedline-fade 0.35s ease-out forwards;
+}
+@keyframes coc-speedline-fade {
+  0%   { opacity:.8; transform:scaleX(1); }
+  100% { opacity:0;  transform:scaleX(0.3); }
+}
+
+/* ── Name label ── */
+.coc-name {
+  font-size:10px; font-weight:800; color: var(--coc-main);
+  white-space:nowrap; margin-bottom:2px; pointer-events:none;
+  text-shadow: -1px -1px 0 rgba(255,255,255,.9), 1px -1px 0 rgba(255,255,255,.9),
+               -1px  1px 0 rgba(255,255,255,.9), 1px  1px 0 rgba(255,255,255,.9);
+}
+
+/* ── Above stack ── */
+.coc-above {
+  display:flex; flex-direction:column; align-items:center; gap:5px;
+  margin-bottom:10px; pointer-events:none;
+}
+
+/* ── Countdown badge — uses theme color ── */
+.coc-countdown {
+  background: linear-gradient(135deg, var(--coc-main), var(--coc-light));
+  color:white; border-radius:20px; padding:4px 13px;
+  font-size:11px; font-weight:800; white-space:nowrap;
+  box-shadow: 0 3px 12px color-mix(in srgb, var(--coc-main) 50%, transparent);
+  text-shadow: 0 1px 2px rgba(0,0,0,.2);
+  display:none; animation: coc-pulse 2s ease-in-out infinite;
+}
+@keyframes coc-pulse { 0%,100%{transform:scale(1);} 50%{transform:scale(1.05);} }
+
+/* ── Bubble — uses theme color ── */
+.coc-bubble {
+  background:white; border:2.5px solid var(--coc-border); border-radius:14px;
+  padding:7px 13px; font-size:12px; font-weight:700; color:#3d2b1f;
+  white-space:nowrap;
+  box-shadow: 0 4px 16px color-mix(in srgb, var(--coc-main) 25%, transparent);
+  display:none; position:relative; animation: coc-pop .25s ease;
+}
+.coc-bubble::after {
+  content:''; position:absolute; top:100%; left:50%; transform:translateX(-50%);
+  border:6px solid transparent; border-top-color: var(--coc-border);
+}
+.coc-bubble::before {
+  content:''; position:absolute; top:calc(100% - 1px); left:50%; transform:translateX(-50%);
+  border:5px solid transparent; border-top-color:white; z-index:1;
+}
+@keyframes coc-pop {
+  0%{transform:scale(.7);opacity:0;} 60%{transform:scale(1.08);} 100%{transform:scale(1);opacity:1;}
+}
+
+/* ── Close button — floats above-right of pet, NOT touching bubble ── */
+.coc-close {
+  position: absolute;
+  /* Sit above the whole pet stack, offset from top-right corner */
+  top:  -10px;
+  right: -10px;
+  width: 16px; height: 16px;
+  background: rgba(40,40,40,.78);
+  color: white; border: none; border-radius: 50%;
+  font-size: 9px; font-weight: 900; cursor: pointer;
+  display: none; align-items: center; justify-content: center;
+  pointer-events: auto; z-index: 10;
+  transition: background .15s, transform .15s;
+  line-height: 1;
+  box-shadow: 0 1px 4px rgba(0,0,0,.25);
+}
+.coc-close:hover { background: rgba(210,40,40,.95); transform: scale(1.15); }
+.coc-pet:hover .coc-close { display: flex; }
+
+/* ── Context menu ── */
+.coc-ctx-menu {
+  position:fixed; background:white;
+  border:1.5px solid color-mix(in srgb, var(--coc-main) 30%, #ddd);
+  border-radius:10px; box-shadow:0 8px 24px rgba(0,0,0,.15);
+  padding:5px 0; z-index:2147483647; min-width:145px;
+  font-family:'Apple SD Gothic Neo','Malgun Gothic','Segoe UI',sans-serif;
+  pointer-events:auto; animation:coc-ctx-in .15s ease;
+}
+@keyframes coc-ctx-in { from{transform:scale(.92);opacity:0;} to{transform:scale(1);opacity:1;} }
+.coc-ctx-item {
+  padding:9px 14px; font-size:12px; font-weight:700; color:#3d2b1f;
+  cursor:pointer; transition:background .1s;
+}
+.coc-ctx-item:hover { background: color-mix(in srgb, var(--coc-main) 10%, white); }
+.coc-ctx-item.bye:hover { background:#fff0f0; color:#cc3333; }
+
+/* ── Ripple ── */
+.coc-ripple {
+  position:absolute; width:40px; height:40px; border-radius:50%;
+  background: color-mix(in srgb, var(--coc-light) 40%, transparent);
+  animation:coc-ripple .5s ease-out forwards;
+  pointer-events:none; transform:translate(-50%,-50%);
+}
+@keyframes coc-ripple {
+  0%  {transform:translate(-50%,-50%) scale(0);opacity:1;}
+  100%{transform:translate(-50%,-50%) scale(3);opacity:0;}
+}
+
+/* ── Exit animation ── */
+@keyframes coc-exit {
+  0%  {transform:scale(1) rotate(0deg);opacity:1;}
+  30% {transform:scale(1.15) rotate(-8deg);}
+  60% {transform:scale(1.05) rotate(5deg);}
+  100%{transform:scale(0) rotate(20deg) translateY(30px);opacity:0;}
+}
+.coc-pet.exiting { animation:coc-exit 0.5s ease-in forwards; pointer-events:none; }

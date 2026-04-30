@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Clock Out Crew",
+    "description": "Extension name shown in Chrome"
+  },
+  "appDescription": {
+    "message": "Your desk pets count down to clock-out time. Let the crew handle it.",
+    "description": "Extension description shown in Chrome Web Store"
+  }
+}

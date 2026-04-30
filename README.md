@@ -8,20 +8,22 @@ Meet the cute crew counting down to your clock-out time!
 ---
 
 ## 🇰🇷 설치 방법 (Korean)
-1. 다운로드한 **COC 압축파일**의 압축을 해제합니다.
-2. 크롬 주소창에 `chrome://extensions`를 입력합니다.
-3. 우측 상단의 **개발자 모드** 토글을 **ON**으로 변경합니다.
-4. **"압축 해제된 확장 프로그램 로드"** 버튼을 클릭합니다.
-5. **COC 폴더 안에 있는 `clock-out-crew` 폴더**를 선택합니다.
-6. 아무 웹페이지나 열면 크루가 바로 등장합니다! 🎉
+1. 상단의 초록색 **[Code]** 버튼을 클릭하고 **[Download ZIP]**을 눌러 파일을 받습니다.
+2. 다운로드한 압축파일을 해제합니다.
+3. 크롬 주소창에 `chrome://extensions`를 입력합니다.
+4. 우측 상단의 **개발자 모드** 토글을 **ON**으로 변경합니다.
+5. **"압축 해제된 확장 프로그램 로드"** 버튼을 클릭합니다.
+6. 압축을 푼 폴더 내부의 **`clock-out-crew`** 폴더를 선택합니다.
+7. 아무 웹페이지나 열면 크루가 바로 등장합니다! 🎉
 
 ## 🌎 How to Install (English)
-1. Unzip the downloaded **COC zip file**.
-2. Type `chrome://extensions` in your Chrome address bar.
-3. Switch the **Developer mode** toggle in the upper right corner to **ON**.
-4. Click the **"Load unpacked"** button.
-5. Select the **`clock-out-crew` folder inside the COC folder**.
-6. Open any webpage, and the crew will appear instantly! 🎉
+1. Click the green **[Code]** button at the top and select **[Download ZIP]**.
+2. Extract the downloaded ZIP file.
+3. Type `chrome://extensions` in your Chrome address bar.
+4. Switch the **Developer mode** toggle in the upper right corner to **ON**.
+5. Click the **"Load unpacked"** button.
+6. Select the **`clock-out-crew`** folder inside the extracted folder.
+7. Open any webpage, and the crew will appear instantly! 🎉
 
 ---
 

@@ -14,7 +14,9 @@ Meet the cute crew counting down to your clock-out time!
 4. 우측 상단의 **개발자 모드** 토글을 **ON**으로 변경합니다.
 5. **"압축 해제된 확장 프로그램 로드"** 버튼을 클릭합니다.
 6. 압축을 푼 폴더 내부의 **`clock-out-crew`** 폴더를 선택합니다.
-7. 아무 웹페이지나 열면 크루가 바로 등장합니다! 🎉
+7. 크롬 우측 상단의 **퍼즐 모양 아이콘(확장 프로그램)**을 누른 뒤, **Clock Out Crew**를 클릭해 실행합니다.
+8. 팝업창에서 퇴근 시간을 설정하면 귀여운 크루가 등장합니다! 🎉
+   *(TIP: 핀 아이콘을 눌러 고정해두면 더 편하게 사용할 수 있어요!)*
 
 ## 🌎 How to Install (English)
 1. Click the green **[Code]** button at the top and select **[Download ZIP]**.
@@ -23,7 +25,9 @@ Meet the cute crew counting down to your clock-out time!
 4. Switch the **Developer mode** toggle in the upper right corner to **ON**.
 5. Click the **"Load unpacked"** button.
 6. Select the **`clock-out-crew`** folder inside the extracted folder.
-7. Open any webpage, and the crew will appear instantly! 🎉
+7. Click the **puzzle icon (Extensions)** in the top right of Chrome and click **Clock Out Crew** to run it.
+8. Set your clock-out time in the popup window, and the crew will appear! 🎉
+   *(TIP: Click the pin icon to keep it visible for easy access!)*
 
 ---
 
